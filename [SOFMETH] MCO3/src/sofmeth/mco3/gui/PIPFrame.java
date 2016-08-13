@@ -17,6 +17,11 @@ public class PIPFrame extends javax.swing.JFrame {
     public PIPFrame() {
         initComponents();
     }
+    
+    public PIPFrame(float comboValue) {
+        initComponents();
+        this.setVisible(true);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

@@ -17,6 +17,11 @@ public class TPTFrame extends javax.swing.JFrame {
     public TPTFrame() {
         initComponents();
     }
+    
+    public TPTFrame(float comboValue) {
+        initComponents();
+        this.setVisible(true);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

@@ -17,6 +17,11 @@ public class TRTFrame extends javax.swing.JFrame {
     public TRTFrame() {
         initComponents();
     }
+    
+    public TRTFrame(float comboValue) {
+        initComponents();
+        this.setVisible(true);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

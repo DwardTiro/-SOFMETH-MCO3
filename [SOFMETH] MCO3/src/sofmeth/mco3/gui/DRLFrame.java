@@ -9,13 +9,31 @@ package sofmeth.mco3.gui;
  *
  * @author owner
  */
+import javax.swing.JPanel;
+import java.awt.GridBagLayout;
+import java.util.ArrayList;
+import panels.DRLPanel;
 public class DRLFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form DRLFrame
      */
+    private ArrayList<DRLPanel> drlList = new ArrayList<DRLPanel>();
+    private JPanel mainPanel = new JPanel();
     public DRLFrame() {
+        drlList.add(new DRLPanel());
         initComponents();
+        defectPanel.setLayout(new GridBagLayout());
+        defectPanel.add(new DRLPanel());
+    }
+    
+    public DRLFrame(float comboValue) {
+        drlList.add(new DRLPanel(1));
+        initComponents();
+        defectPanel.setLayout(new GridBagLayout());
+        defectPanel.add(drlList.get(0));
+        System.out.println("lel");
+        this.setVisible(true);
     }
 
     /**
@@ -27,17 +45,46 @@ public class DRLFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        defectPanel = new javax.swing.JPanel();
+        doneButton = new javax.swing.JButton();
+        backButton = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        doneButton.setText("Done");
+
+        backButton.setText("Back");
+
+        javax.swing.GroupLayout defectPanelLayout = new javax.swing.GroupLayout(defectPanel);
+        defectPanel.setLayout(defectPanelLayout);
+        defectPanelLayout.setHorizontalGroup(
+            defectPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, defectPanelLayout.createSequentialGroup()
+                .addContainerGap(347, Short.MAX_VALUE)
+                .addComponent(doneButton)
+                .addGap(34, 34, 34)
+                .addComponent(backButton)
+                .addGap(26, 26, 26))
+        );
+        defectPanelLayout.setVerticalGroup(
+            defectPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, defectPanelLayout.createSequentialGroup()
+                .addContainerGap(370, Short.MAX_VALUE)
+                .addGroup(defectPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(doneButton)
+                    .addComponent(backButton))
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(defectPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(defectPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -79,5 +126,8 @@ public class DRLFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backButton;
+    private javax.swing.JPanel defectPanel;
+    private javax.swing.JButton doneButton;
     // End of variables declaration//GEN-END:variables
 }

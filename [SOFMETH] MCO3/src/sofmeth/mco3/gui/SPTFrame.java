@@ -17,6 +17,11 @@ public class SPTFrame extends javax.swing.JFrame {
     public SPTFrame() {
         initComponents();
     }
+    
+    public SPTFrame(float comboValue) {
+        initComponents();
+        this.setVisible(true);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

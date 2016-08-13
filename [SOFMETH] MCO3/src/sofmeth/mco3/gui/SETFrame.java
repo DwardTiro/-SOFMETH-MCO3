@@ -17,6 +17,11 @@ public class SETFrame extends javax.swing.JFrame {
     public SETFrame() {
         initComponents();
     }
+    
+    public SETFrame(float comboValue) {
+        initComponents();
+        this.setVisible(true);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

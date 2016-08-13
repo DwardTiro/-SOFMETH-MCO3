@@ -8,6 +8,14 @@ import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import sofmeth.mco3.gui.SourceCodeFrame;
+import sofmeth.mco3.gui.DRLFrame;
+import sofmeth.mco3.gui.PIPFrame;
+import sofmeth.mco3.gui.PPSFrame;
+import sofmeth.mco3.gui.SETFrame;
+import sofmeth.mco3.gui.SPTFrame;
+import sofmeth.mco3.gui.TPTFrame;
+import sofmeth.mco3.gui.TRLFrame;
+import sofmeth.mco3.gui.TRTFrame;
 /**
  *
  * @author owner
@@ -20,6 +28,14 @@ public class MainMenu extends javax.swing.JFrame {
     //private MainMenu mainMenu = new MainMenu();
     //private final CardLayout cl = new CardLayout();
     private SourceCodeFrame sourceCodeFrame;
+    private DRLFrame drlFrame;
+    private TRLFrame trlFrame;
+    private PIPFrame pipFrame;
+    private PPSFrame ppsFrame;
+    private SETFrame sestFrame;
+    private SPTFrame sptFrame;
+    private TPTFrame tptFrame;
+    private TRTFrame trtFrame;
     private float comboValue;
     public MainMenu() {
         //menuPanel.setLayout(cl);
@@ -205,6 +221,71 @@ public class MainMenu extends javax.swing.JFrame {
                 comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
                 sourceCodeFrame = new SourceCodeFrame(comboValue);
                 
+            }
+        });
+        
+        drlButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                drlFrame = new DRLFrame(comboValue);
+                
+            }
+        });
+        
+        trlButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                trlFrame = new TRLFrame(comboValue);
+            }
+        });
+        
+        pipButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                pipFrame = new PIPFrame(comboValue);
+            }
+        });
+        
+        ppsButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                ppsFrame = new PPSFrame(comboValue);
+            }
+        });
+        
+        sestButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                sestFrame = new SETFrame(comboValue);
+            }
+        });
+        
+        sptButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                sptFrame = new SPTFrame(comboValue);
+            }
+        });
+        
+        tptButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                tptFrame = new TPTFrame(comboValue);
+            }
+        });
+        
+        trtButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                trtFrame = new TRTFrame(comboValue);
             }
         });
     }
