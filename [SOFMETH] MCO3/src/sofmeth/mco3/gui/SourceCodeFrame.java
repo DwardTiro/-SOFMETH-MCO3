@@ -4,7 +4,11 @@
  * and open the template in the editor.
  */
 package sofmeth.mco3.gui;
-
+import java.io.File;
+import java.io.FileOutputStream;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import org.apache.poi.xwpf.usermodel.XWPFRun;
 /**
  *
  * @author owner
@@ -50,6 +54,11 @@ public class SourceCodeFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(codeTextArea);
 
         doneButton.setText("Done");
+        doneButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                doneButtonActionPerformed(evt);
+            }
+        });
 
         closeButton.setText("Close");
 
@@ -89,6 +98,26 @@ public class SourceCodeFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void doneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneButtonActionPerformed
+        // TODO add your handling code here:
+        XWPFDocument document = new XWPFDocument();
+        //write document
+        try {
+            FileOutputStream out = new FileOutputStream(new File("sourcecode.docx"));
+            XWPFParagraph paragraph = document.createParagraph();
+            XWPFRun run = paragraph.createRun();
+            run.setText(codeTextArea.getText());
+            document.write(out);
+            out.close();
+            
+        }
+        catch(Exception e){
+            
+        }
+        
+        
+    }//GEN-LAST:event_doneButtonActionPerformed
 
     /**
      * @param args the command line arguments
