@@ -18,7 +18,7 @@ public class TRLFrame extends javax.swing.JFrame {
         initComponents();
     }
     
-    public TRLFrame(float comboValue) {
+    public TRLFrame(float comboValue, String nameField, String profField, String dateField, String langField) {
         initComponents();
         this.setVisible(true);
     }

@@ -18,7 +18,7 @@ public class TPTFrame extends javax.swing.JFrame {
         initComponents();
     }
     
-    public TPTFrame(float comboValue) {
+    public TPTFrame(float comboValue, String nameField, String profField, String dateField, String langField) {
         initComponents();
         this.setVisible(true);
     }
