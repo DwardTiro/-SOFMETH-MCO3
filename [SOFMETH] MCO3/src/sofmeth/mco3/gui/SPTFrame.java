@@ -18,7 +18,7 @@ public class SPTFrame extends javax.swing.JFrame {
         initComponents();
     }
     
-    public SPTFrame(float comboValue) {
+    public SPTFrame(float comboValue, String nameField, String profField, String dateField, String langField) {
         initComponents();
         this.setVisible(true);
     }

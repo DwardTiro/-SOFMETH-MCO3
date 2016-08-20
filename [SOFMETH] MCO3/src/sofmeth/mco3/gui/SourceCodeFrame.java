@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package sofmeth.mco3.gui;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileOutputStream;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
@@ -24,7 +26,7 @@ public class SourceCodeFrame extends javax.swing.JFrame {
         System.out.println("XD");
     }
     
-    public SourceCodeFrame(float comboValue) {
+    public SourceCodeFrame(float comboValue, String nameField, String profField, String dateField, String langField) {
         initComponents();
         this.setVisible(true);
         System.out.println(comboValue);
@@ -61,6 +63,11 @@ public class SourceCodeFrame extends javax.swing.JFrame {
         });
 
         closeButton.setText("Close");
+        closeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                closeButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,6 +106,7 @@ public class SourceCodeFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+        
     private void doneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneButtonActionPerformed
         // TODO add your handling code here:
         XWPFDocument document = new XWPFDocument();
@@ -118,6 +126,11 @@ public class SourceCodeFrame extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_doneButtonActionPerformed
+
+    private void closeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeButtonActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_closeButtonActionPerformed
 
     /**
      * @param args the command line arguments
