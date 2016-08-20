@@ -20,16 +20,23 @@ public class SourceCodeFrame extends javax.swing.JFrame {
     /**
      * Creates new form SourceCodeFrame
      */
+    public String nameField, profField, sectionField, dateField, langField;
     public SourceCodeFrame() {
         initComponents();
         this.setVisible(true);
         System.out.println("XD");
     }
     
-    public SourceCodeFrame(float comboValue, String nameField, String profField, String dateField, String langField) {
+    public SourceCodeFrame(float comboValue, String nameField, String profField, String sectionField, String dateField, String langField) {
         initComponents();
         this.setVisible(true);
         System.out.println(comboValue);
+        System.out.print(nameField);
+        this.nameField = nameField;
+        this.profField = profField;
+        this.sectionField = sectionField;
+        this.dateField = dateField;
+        this.langField = langField;
     }
 
     /**
@@ -115,6 +122,7 @@ public class SourceCodeFrame extends javax.swing.JFrame {
             FileOutputStream out = new FileOutputStream(new File("sourcecode.docx"));
             XWPFParagraph paragraph = document.createParagraph();
             XWPFRun run = paragraph.createRun();
+            run.setText("Name of student: " + nameField);
             run.setText(codeTextArea.getText());
             document.write(out);
             out.close();
