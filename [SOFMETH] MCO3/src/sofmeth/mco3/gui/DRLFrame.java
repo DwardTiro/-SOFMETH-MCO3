@@ -27,7 +27,7 @@ public class DRLFrame extends javax.swing.JFrame {
         defectPanel.add(new DRLPanel());
     }
     
-    public DRLFrame(float comboValue) {
+    public DRLFrame(float comboValue, String nameField, String profField, String dateField, String langField) {
         drlList.add(new DRLPanel(1));
         initComponents();
         defectPanel.setLayout(new GridBagLayout());

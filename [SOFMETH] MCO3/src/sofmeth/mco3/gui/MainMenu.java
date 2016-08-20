@@ -37,10 +37,11 @@ public class MainMenu extends javax.swing.JFrame {
     private TPTFrame tptFrame;
     private TRTFrame trtFrame;
     private float comboValue;
+    boolean complete = false;
     public MainMenu() {
         //menuPanel.setLayout(cl);
         initComponents();
-        addListener_menu();   
+        addListener_menu();
     }
 
     /**
@@ -68,14 +69,14 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         pspCombo = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        nameField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        profField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        dateField = new javax.swing.JTextField();
+        langField = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         jMenu1.setText("jMenu1");
@@ -120,21 +121,19 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel3.setText("Name of student:");
 
-        jTextField1.setText("jTextField1");
+        nameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameFieldActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Name of Professor:");
-
-        jTextField2.setText("jTextField2");
 
         jLabel5.setText("Date:");
 
         jLabel6.setText("Section:");
 
         jLabel7.setText("Language:");
-
-        jTextField3.setText("jTextField3");
-
-        jTextField4.setText("jTextField4");
 
         jButton1.setText("Generate");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -183,21 +182,21 @@ public class MainMenu extends javax.swing.JFrame {
                                     .addGroup(menuPanelLayout.createSequentialGroup()
                                         .addComponent(jLabel4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField2))
+                                        .addComponent(profField))
                                     .addGroup(menuPanelLayout.createSequentialGroup()
                                         .addComponent(jLabel3)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(73, 73, 73)
                                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(menuPanelLayout.createSequentialGroup()
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField3))
+                                        .addComponent(dateField))
                                     .addGroup(menuPanelLayout.createSequentialGroup()
                                         .addComponent(jLabel7)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(langField, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE)))))
                         .addGap(48, 48, 48))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuPanelLayout.createSequentialGroup()
@@ -210,15 +209,15 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(profField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(langField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
@@ -280,6 +279,10 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nameFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -319,79 +322,100 @@ public class MainMenu extends javax.swing.JFrame {
         scButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
-                sourceCodeFrame = new SourceCodeFrame(comboValue);
-                
+                if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
+                    comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                    sourceCodeFrame = new SourceCodeFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
+                }
             }
         });
         
         drlButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
-                drlFrame = new DRLFrame(comboValue);
-                
+                if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
+                    comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                    drlFrame = new DRLFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
+                }
             }
         });
         
         trlButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
-                trlFrame = new TRLFrame(comboValue);
+                if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
+                    comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                    trlFrame = new TRLFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());    
+                }
             }
         });
         
         pipButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
-                pipFrame = new PIPFrame(comboValue);
+                if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
+                    comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                    pipFrame = new PIPFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
+                }
+                
             }
         });
         
         ppsButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
-                ppsFrame = new PPSFrame(comboValue);
+                if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
+                    comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                    ppsFrame = new PPSFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());    
+                }
             }
         });
         
         sestButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
-                sestFrame = new SETFrame(comboValue);
+                if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
+                    comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                    sestFrame = new SETFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
+                }
+                
             }
         });
         
         sptButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
-                sptFrame = new SPTFrame(comboValue);
+                if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
+                    comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                    sptFrame = new SPTFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());    
+                }
+                
             }
         });
         
         tptButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
-                tptFrame = new TPTFrame(comboValue);
+                if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
+                    comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                    tptFrame = new TPTFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());    
+                }
+                
             }
         });
         
         trtButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
-                trtFrame = new TRTFrame(comboValue);
+                if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
+                    comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                    trtFrame = new TRTFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());    
+                }
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField dateField;
     private javax.swing.JButton drlButton;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -403,13 +427,12 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField langField;
     private javax.swing.JPanel menuPanel;
+    private javax.swing.JTextField nameField;
     private javax.swing.JButton pipButton;
     private javax.swing.JButton ppsButton;
+    private javax.swing.JTextField profField;
     private javax.swing.JComboBox<String> pspCombo;
     private javax.swing.JButton scButton;
     private javax.swing.JButton sestButton;
