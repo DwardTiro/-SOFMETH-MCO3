@@ -322,94 +322,141 @@ public class MainMenu extends javax.swing.JFrame {
         scButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+<<<<<<< HEAD
                 if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
                     comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
                     sourceCodeFrame = new SourceCodeFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
                 }
+=======
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                sourceCodeFrame = new SourceCodeFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
+                
+>>>>>>> origin/master
             }
         });
         
         drlButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+<<<<<<< HEAD
                 if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
                     comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
                     drlFrame = new DRLFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
                 }
+=======
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                drlFrame = new DRLFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
+                
+>>>>>>> origin/master
             }
         });
         
         trlButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+<<<<<<< HEAD
                 if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
                     comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
                     trlFrame = new TRLFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());    
                 }
+=======
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                trlFrame = new TRLFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
+>>>>>>> origin/master
             }
         });
         
         pipButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+<<<<<<< HEAD
                 if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
                     comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
                     pipFrame = new PIPFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
                 }
                 
+=======
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                pipFrame = new PIPFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
+>>>>>>> origin/master
             }
         });
         
         ppsButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+<<<<<<< HEAD
                 if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
                     comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
                     ppsFrame = new PPSFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());    
                 }
+=======
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                ppsFrame = new PPSFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
+>>>>>>> origin/master
             }
         });
         
         sestButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+<<<<<<< HEAD
                 if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
                     comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
                     sestFrame = new SETFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
                 }
                 
+=======
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                sestFrame = new SETFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
+>>>>>>> origin/master
             }
         });
         
         sptButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+<<<<<<< HEAD
                 if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
                     comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
                     sptFrame = new SPTFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());    
                 }
                 
+=======
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                sptFrame = new SPTFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
+>>>>>>> origin/master
             }
         });
         
         tptButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+<<<<<<< HEAD
                 if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
                     comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
                     tptFrame = new TPTFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());    
                 }
                 
+=======
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                tptFrame = new TPTFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
+>>>>>>> origin/master
             }
         });
         
         trtButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+<<<<<<< HEAD
                 if((!nameField.getText().isEmpty())&&(!profField.getText().isEmpty())&&(!dateField.getText().isEmpty())&&(!langField.getText().isEmpty())){
                     comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
                     trtFrame = new TRTFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());    
                 }
+=======
+                comboValue = Float.valueOf(String.valueOf(pspCombo.getSelectedItem()));
+                trtFrame = new TRTFrame(comboValue, nameField.getText(), profField.getText(), dateField.getText(), langField.getText());
+>>>>>>> origin/master
             }
         });
     }
